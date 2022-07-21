@@ -39,16 +39,16 @@
         &__names {
           width: 100%;
           min-height: 200px;
-          height: auto;
+          // height: auto;
           
           @include flexBox (auto, auto, auto, true);
 
           & li {
             min-width: 25%;
-            width: auto;
+            flex: 1 1 auto;
             color: #fff;
-            background-color: $purple;
             font-weight: 600;
+            background-color: $blue;
 
             @include flexBox (auto, center, center, false);
 
@@ -56,16 +56,17 @@
             &:nth-child(3n) { background-color: $yellow; }
             &:nth-child(4n) { background-color: $pink; }
             &:nth-child(5n) { background-color: $red; }
-
-            &.empty { 
-              background-color: $border-grey; 
-              text-align: center;
-            
-              &::before {
-                @include icon ("\f119", 2.1rem, inherit)
-              }
-            }
           }   
+
+          &.clear { 
+            background-color: $border-grey; 
+            text-align: center;
+            @include flexBox (auto, center, center, false);
+              
+              &::before {
+                @include icon ("\f119", 2.1rem, #fff);
+              }
+          }
         }
       }
     }

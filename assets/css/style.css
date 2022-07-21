@@ -108,12 +108,17 @@ li {
   transition: 1s all ease; }
 
 .error {
-  display: none;
-  position: absolute;
-  bottom: -20px;
+  padding-top: 10px;
   color: #ec6363;
-  font-size: 13px;
-  font-weight: 600; }
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: inline-block; }
 
 .home__title {
   margin: 50px auto;
@@ -151,7 +156,6 @@ li {
     .home__birthday-list__cards__item__names {
       width: 100%;
       min-height: 200px;
-      height: auto;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -159,10 +163,10 @@ li {
       align-items: stretch; }
       .home__birthday-list__cards__item__names li {
         min-width: 25%;
-        width: auto;
+        flex: 1 1 auto;
         color: #fff;
-        background-color: #ab9eee;
         font-weight: 600;
+        background-color: #0186ef;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -176,17 +180,22 @@ li {
           background-color: #dc63ec; }
         .home__birthday-list__cards__item__names li:nth-child(5n) {
           background-color: #ec6363; }
-        .home__birthday-list__cards__item__names li.empty {
-          background-color: #d3d7d8;
-          text-align: center; }
-          .home__birthday-list__cards__item__names li.empty::before {
-            content: "";
-            color: inherit;
-            font-family: "FontAwesome";
-            font-size: 2.1rem;
-            font-weight: 500;
-            float: right;
-            text-indent: 0; }
+      .home__birthday-list__cards__item__names.clear {
+        background-color: #d3d7d8;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .home__birthday-list__cards__item__names.clear::before {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 2.1rem;
+          font-weight: 500;
+          float: right;
+          text-indent: 0; }
 
 .data-input {
   width: 100%;

@@ -27,13 +27,17 @@ li {
 .transition { transition: 1s all ease; }
 
 .error {
-  display: none;
-  position: absolute;
-  bottom: -20px;
+  padding-top: 10px;
   color: $red;
+  font-style: italic;
 
-  @include font (13px, 600);
+  @include font (12px, 500);
 }
+
+.hide { display: none; }
+
+.show { display: inline-block; }
+
 
 
 
