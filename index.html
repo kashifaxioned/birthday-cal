@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,10 +13,10 @@
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,17 +24,82 @@
   <div class="container">
     <!--header section start-->
     <header>
-      
+
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <div class="wrapper">
+        <h1 class="title">Birthday Cal</h1>
+        <div class="birthday-list">
+          <ul class="cards">
+            <li class="card-item clear">
+              <h2>SUN</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>MON</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>TUE</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>WED</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>THU</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>FRI</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+            <li class="card-item clear">
+              <h2>SAT</h2>
+              <ul class="names">
+                <li>name list</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="data-input">
+          <form action="/" class="input-form">
+            <div class="textarea">
+              <textarea name="data" id="data"></textarea>
+              <span class="error textareaErr">Error</span>
+            </div>
+            <div class="update">
+              <div>
+                <label for="year">Year</label>
+                <input type="text" name="year" id="year" />
+                <span class="error yearErr">Error</span>
+              </div>
+              <button type="submit">UPDATE</button>
+            </div>
+          </form>
+          <p class="note"><strong>NOTE: </strong> Date Format (month/day/year - 12/30/2000)</p>
+        </div>
+      </div>
     </main>
     <!--main section end-->
 
     <!--footer section start-->
-    <footer>      
+    <footer>
 
     </footer>
     <!--footer section end-->
@@ -43,4 +108,5 @@
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
