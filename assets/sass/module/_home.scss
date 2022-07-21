@@ -39,7 +39,6 @@
         &__names {
           width: 100%;
           min-height: 200px;
-          // height: auto;
           
           @include flexBox (auto, auto, auto, true);
 
