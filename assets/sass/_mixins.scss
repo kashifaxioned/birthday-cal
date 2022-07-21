@@ -1,0 +1,77 @@
+@mixin icon ($content, $size, $color) {
+  content: $content;
+  color: $color;
+  font-family: "FontAwesome";
+  font-size: $size;
+  font-weight: 500;
+  float: right;
+  text-indent: 0;
+}
+
+@mixin flexBox ($flex-direction, $justify-content, $align-items, $wrap) {
+  display: flex;
+
+  @if $wrap { flex-wrap: wrap; }
+  @else { flex-wrap: nowrap; }
+  
+  @if $flex-direction != auto { flex-direction: $flex-direction }
+  @else { flex-direction: row }
+
+  @if $justify-content != auto { justify-content: $justify-content }
+  @else { justify-content: flex-start; }
+
+  @if $align-items != auto { align-items: $align-items; }
+  @else { align-items: stretch }
+}
+
+@mixin font ($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin pos-absolute ($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin breakpoint($device) {
+  @if($device=='pc'){
+    @media screen and (max-width: $pc) {
+      @content;
+    }
+  }
+  @else if($device=='ipad-pro') {
+    @media screen and (max-width: $ipad-pro) {
+      @content;
+    }
+  }
+  @else if($device=='ipad') {
+    @media screen and (max-width: $ipad) {
+      @content;
+    }
+  }
+  @else if($device=='large-mobile') {
+    @media screen and (max-width: $large-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='med-mobile') {
+    @media screen and (max-width: $med-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='small-mobile') {
+    @media screen and (max-width: $small-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='min-ipad') {
+    @media screen and (min-width: $ipad) {
+      @content;
+    }
+  }
+}
+

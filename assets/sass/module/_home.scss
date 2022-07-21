@@ -1,0 +1,73 @@
+.home {
+
+  &__title {
+    margin: 50px auto;
+    color: $title-grey;
+    font-weight: 300;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  &__birthday-list {
+
+    &__cards {
+      @include flexBox (auto, center, center, false);
+      gap: 1.2%;
+
+      @include breakpoint(ipad-pro) { flex-wrap: wrap; }
+
+      @include breakpoint (large-mobile) { flex-direction: column; }
+
+      &__item {
+        flex-basis: 14%;
+        border: 1px solid #d3d7d8;
+        border-radius: 5px;
+
+        @include breakpoint(ipad-pro) { 
+          flex-basis: 20%;;
+          margin: 10px 0;
+        }
+        
+
+        &__day {
+          padding: 10px;
+          background-color: $purple;
+          color: #fff;
+          text-align: right;
+        }
+
+        &__names {
+          width: 100%;
+          min-height: 200px;
+          height: auto;
+          
+          @include flexBox (auto, auto, auto, true);
+
+          & li {
+            min-width: 25%;
+            width: auto;
+            color: #fff;
+            background-color: $purple;
+            font-weight: 600;
+
+            @include flexBox (auto, center, center, false);
+
+            &:nth-child(2n) { background-color: $green; }
+            &:nth-child(3n) { background-color: $yellow; }
+            &:nth-child(4n) { background-color: $pink; }
+            &:nth-child(5n) { background-color: $red; }
+
+            &.empty { 
+              background-color: $border-grey; 
+              text-align: center;
+            
+              &::before {
+                @include icon ("\f119", 2.1rem, inherit)
+              }
+            }
+          }   
+        }
+      }
+    }
+  }
+}
