@@ -1,0 +1,24 @@
+{
+  "name": "birthday-cal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w assets/sass/style.scss assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashifaxioned/birthday-cal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashifaxioned/birthday-cal/issues"
+  },
+  "homepage": "https://github.com/kashifaxioned/birthday-cal#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
